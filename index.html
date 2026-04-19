@@ -5,16 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Upscale Design</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="about.html">
 </head>
-<body>
+<body class="preload">
+    <script>
+        history.scrollRestoration = 'manual';
+        window.scrollTo(0, 0);
+    </script>
+
     <section class="nav-section">
         <nav>
             <a href="index.html"><img src="img/upscale_logo-removebg-preview.png" alt="logo"></a>
             <div class="navlinks" id="navlinks">
                 <ul>
                     <li><a href="#contacts">Contact Us</a></li>
-                    
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#about">About Us</a></li>
                     <li><a href="#services">Services</a></li>
@@ -23,34 +26,47 @@
             </div>
         </nav>
     </section>
+
     <section class="header" id="home">
         <div class="parallax-bg">
             <div class="text-box">
-                <h1>Welcome to Upscale Design <br>
-                and Sevices.</h1>
+                <h1>Welcome to Upscale Builder <br> Services Inc.</h1>
                 <p>Creating stunning designs for your business <br>
                 commercial and residential spaces.</p>
                 <a href="#projects" class="hiro-btn">View Our Work</a>
             </div>
         </div>
     </section>
+
     <section class="services" id="services">
-        <h2>Our Services</h2>
+        <h2>Services</h2>
+        <h3> We offer a wide range of <br>
+            design and construction services</h3>
         <div class="service-container">
-            <div class="service">
-                <h3>Architectural Design</h3>
-                <p>Modern, functional, and aesthetic building design.</p>
+            <div class="service-card slide-left">
+                <img src="img/floorplan.jpg" alt="">
+                <div class="service-overlay">
+                    <h3>Architectural Design</h3>
+                    <p>Modern, functional, and aesthetic building design.</p>
+                </div>
             </div>
-            <div class="service">
-                <h3>Interior Design</h3>
-                <p>Elegant and space-efficient interior solutions.</p>
+            <div class="service-card slide-right">
+                <img src="img/moderncontemp.jpg" alt="">
+                <div class="service-overlay">
+                    <h3>Interior Design</h3>
+                    <p>Elegant and space-efficient interior solutions.</p>
+                </div>
             </div>
-            <div class="service">
-                <h3>Project Management</h3>
-                <p>End-to-end supervision of construction projects.</p>
+            <div class="service-card slide-left">
+                <img src="img/project management.jpg" alt="">
+                <div class="service-overlay">
+                    <h3>Project Management</h3>
+                    <p>End-to-end supervision of construction projects.</p>
+                </div>
             </div>
         </div>
     </section>
+
     <section class="portfolio" id="projects">
         <h2>Our Projects</h2>
         <div class="project-container">
@@ -61,8 +77,8 @@
             </div>
             <div class="project">
                 <img src="img/project2.jpg" alt="Project 2">
-                <h3>Project Title 2</h3>
-                <p>Brief description of the project.</p>
+                    <h3>Project Title 2</h3>
+                    <p>Brief description of the project.</p>
             </div>
             <div class="project">
                 <img src="img/project3.jpg" alt="Project 3">
@@ -71,6 +87,7 @@
             </div>
         </div>
     </section>
+
     <section class="testimonial">
         <h2>What Our Clients Say</h2>
         <div class="testimonial-container">
@@ -84,6 +101,7 @@
             </div>
         </div>
     </section>
+
     <section class="contact" id="contacts">
         <h2>Contact Us</h2>
         <form action="#" method="post">
@@ -92,6 +110,8 @@
             <textarea name="message" placeholder="Your Message" required></textarea>
             <button type="submit">Send Message</button>
         </form>
-<script src="script.js"></script>
+    </section>
+
+    <script src="script.js"></script>
 </body>
 </html>

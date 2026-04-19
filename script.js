@@ -1,31 +1,38 @@
-window.addEventListener('scroll', function() {
+history.scrollRestoration = 'manual';
+
+const parallax = document.querySelector(".parallax-bg");
+
+function updateParallax() {
     const scrollY = window.scrollY;
-    const hero = document.querySelector('.parallax-bg');
-    hero.style.transform = `translateY(${scrollY * 0.5}px)`;
+    parallax.style.transform = `translateY(${scrollY * 0.3}px)`;
+}
+
+// Reset parallax immediately before anything renders
+parallax.style.transform = 'translateY(0px)';
+
+window.addEventListener("load", () => {
+    window.scrollTo({ top: 0, behavior: 'instant' });
+    
+    requestAnimationFrame(() => {
+        requestAnimationFrame(() => { // double rAF ensures DOM is fully painted
+            document.body.classList.remove("preload");
+            updateParallax();
+        });
+    });
 });
 
-let lastScroll = 0;
+window.addEventListener("scroll", () => {
+    requestAnimationFrame(updateParallax);
+});
 
-window.addEventListener('scroll', function() {
-    const nav = document.querySelector(".nav-section");
-    const logo = document.querySelector("nav img");
-    const links = document.querySelectorAll(".navlinks ul li");
-
-    const currentScroll = window.scrollY;
-
-    if (currentScroll > lastScroll) {
-        nav.classList.add("nav-hidden");
-        logo.style.opacity = "0";
-
-    } else {
-        nav.classList.remove("nav-hidden");
-        logo.style.opacity = "1";
-    }
-
-    lastScroll = currentScroll;
-    link.forEach(links, index => {
-        link.style.animation = "0.5s ease"
-        item.style.transform = `translateY(${currentScroll > 50 ? 0 : -20}px)`;
-        link.style.animationDelay = `${index * 0.5}s`;
+const observer = new IntersectionObserver ((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+        }
     });
+}, { threshold: 0.2 });
+
+document.querySelectorAll('.slide-left, .slide-right').forEach((el) => {
+    observer.observe(el);
 });

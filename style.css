@@ -30,10 +30,13 @@ ul {
     gap: 20px;
     margin: 0;
     padding: 0;
+    justify-content: flex-end;
+    width: 100%;
+    transition: all 0.5s ease;
 }
-
-li {
-    float: right;
+.nav-center ul {
+    justify-content: center;
+    transform: translateX(0);
 }
 
 li a {
@@ -81,6 +84,7 @@ li a:hover {
     opacity: 0;
     transform: translateY(30px);
     animation: fadeUp 0.8s ease forwards;
+    padding: 200px 0 10px 0;
 }
 
 .text-box p {
@@ -102,8 +106,13 @@ li a:hover {
   background-size: cover;
   position: relative;
   z-index: auto;
+  min-height: 100vh;
+  
 }
-
+.header {
+    position: relative;
+    overflow: hidden;
+}
 .hiro-btn { 
   display: inline-block;
   text-decoration: none;
@@ -166,22 +175,160 @@ a img {
     }
 }
 
-.header {
+
+.services {
+    padding: 80px 150px 200px 150px;
+    background-color: rgba(4, 9, 30, 0.9);
+    color: #fff;
+}
+
+.services h2 {
+    font-size: 36px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    letter-spacing:  2px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.services h3 {
+    margin-top: 0;
+    padding-bottom: 40px;
+    font-size: 28px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    text-align: center;
+    letter-spacing: 2px;
+    font-weight: 200;
+}
+
+.services > h3 {
+    text-align: center;
+}
+
+.service-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "card1 card2"
+                         "card3 card2";
+    gap: 20px;
+}
+
+.service-card {
+    break-inside: avoid;
     position: relative;
     overflow: hidden;
+    cursor: pointer;
+}
+
+.service-card:hover img {
+    transform: scale(1.5);
+}
+
+.service-card:nth-child(1){
+    grid-area: card1;
+}
+
+.service-card:nth-child(2){
+    grid-area: card2;
+}
+
+.service-card:nth-child(3){
+    grid-area: card3;
+}
+
+.service-card:nth-child(1) img {
+    height: 350px;
+}
+
+.service-card:nth-child(2) img {
+    height: 720px;
+}
+
+.service-card:nth-child(3) img {
+    height: 350px;
+}
+
+.service-card img {
+    width: 100%;
+    object-fit: cover;
+    display:block;
+    transition: transform 0.5s ease;
+}
+
+.service-card h3 {
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 10px;
+    letter-spacing: 1px;
+}
+
+.service-card p {
+    font-size: 12px;
+    color: #888;
+    margin-top: 5px;
+}
+
+.service-overlay {
+    position: absolute;
+    padding: 15px 20px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(4, 9, 30, 0.85);
+    color: #fff;
+    transform: translateY(100%);
+    transition: transform 0.5s ease;
+    text-align: left;
+}
+
+.service-card:hover .service-overlay {
+    transform: translateY(0);
+}
+
+.service-overlay h3 {
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    color: #fff;
+    text-align: left;
+}
+
+.service-overlay p {
+    font-size: 12px;
+    color: #ccc;
+    line-height: 1.5;
+    text-align: left;
+}
+
+.slide-left {
+    transform: translateX(-80px);
+    opacity: 0;
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.slide-right {
+    transform: translateX(80px);
+    opacity: 0;
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.slide-left.visible, .slide-right.visible {
+    transform: translateX(0);
+    opacity: 1;
+}
+.slide-left.slide-left.visible, .slide-right.slide-right.visible {
+    transition: transform 0.5s ease;
 }
 
 .parallax-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 120%;
-    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)),
-                      url("/img/header.jpg");
-    background-size: cover;
-    background-position: center;
-    transform: translateY(0);
+    transform: translateY(0px);
     will-change: transform;
 }
 
+/* fix reload taena */
+body.preload .parallax-bg {
+    transform: translateY(0px) !important;
+}
