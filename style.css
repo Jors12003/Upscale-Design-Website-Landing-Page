@@ -175,7 +175,7 @@ a img {
     }
 }
 
-
+/* Services Section */
 .services {
     padding: 80px 150px 200px 150px;
     background-color: rgba(4, 9, 30, 0.9);
@@ -304,23 +304,24 @@ a img {
 }
 
 .slide-left {
-    transform: translateX(-80px);
     opacity: 0;
+    transform: translateX(-80px);
     transition: opacity 0.8s ease, transform 0.8s ease;
+    will-change: opacity, transform;
 }
 
 .slide-right {
-    transform: translateX(80px);
     opacity: 0;
-    transition: opacity 0.8s ease, transform 0.8s ease;
+    transform: translateX(80px);
+    transition: opacity 0.8s ease, transform 0.8s ease ease;
+    will-change: opacity, transform;
 }
 
-.slide-left.visible, .slide-right.visible {
-    transform: translateX(0);
+.slide-left.visible, 
+.slide-right.visible {
     opacity: 1;
-}
-.slide-left.slide-left.visible, .slide-right.slide-right.visible {
-    transition: transform 0.5s ease;
+    transform: translateX(0);
+    
 }
 
 .parallax-bg {
@@ -331,4 +332,48 @@ a img {
 /* fix reload taena */
 body.preload .parallax-bg {
     transform: translateY(0px) !important;
+}
+
+/* Craft Section */
+.craft {
+    min-height: 100vh;
+    background-color: #04091e;
+    display: flex;
+    align-items: center;   
+    justify-content: center;
+    padding: 150px;
+    overflow: hidden;
+}
+
+.craft-content {
+    max-width: 900px;
+    text-align: center;
+    will-change: transform;
+    transition: transform 0.1s ease-out;
+}
+
+.craft-label {
+    font-size: 11px;
+    color: #e1247a;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-bottom: 30px;
+}
+
+.craft h2 {
+    font-size: 52px;
+    font-weight: 300;
+    color: #fff;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.craft-desc {
+    font-size: 16px;
+    font-weight: 300;
+    color:#ffffff;
+    line-height: 1.9;
+    max-width: 650px;
+    margin: 0 auto;
 }
