@@ -178,7 +178,11 @@ a img {
 /* Services Section */
 .services {
     padding: 80px 150px 200px 150px;
-    background-color: rgba(4, 9, 30, 0.9);
+    background-image: linear-gradient(rgba(4, 9, 30, 0.75), rgba(4, 9, 30, 0.75)),
+        url("img/blueprint.png");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
     color: #fff;
 }
 
@@ -205,6 +209,18 @@ a img {
 
 .services > h3 {
     text-align: center;
+}
+
+.slide-up {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+    will-change: opacity, transform;
+}
+
+.slide-up.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .service-container {
@@ -313,7 +329,7 @@ a img {
 .slide-right {
     opacity: 0;
     transform: translateX(80px);
-    transition: opacity 0.8s ease, transform 0.8s ease ease;
+    transition: opacity 0.8s ease, transform 0.8s ease;
     will-change: opacity, transform;
 }
 
@@ -349,18 +365,20 @@ body.preload .parallax-bg {
     max-width: 900px;
     text-align: center;
     will-change: transform;
-    transition: transform 0.1s ease-out;
+    opacity: 0;
+    transform: translateX(-80px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
 .craft-label {
-    font-size: 11px;
+    font-size: 20px;
     color: #e1247a;
     text-transform: uppercase;
     letter-spacing: 4px;
     margin-bottom: 30px;
 }
 
-.craft h2 {
+.craft-content h2 {
     font-size: 52px;
     font-weight: 300;
     color: #fff;
@@ -376,4 +394,9 @@ body.preload .parallax-bg {
     line-height: 1.9;
     max-width: 650px;
     margin: 0 auto;
+}
+
+.craft-content.visible {
+    opacity: 1;
+    transform: translateX(0);
 }
