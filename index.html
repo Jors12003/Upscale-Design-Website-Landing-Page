@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Upscale Design</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    
 </head>
 <body class="preload">
     <script>
@@ -13,24 +15,29 @@
     </script>
 
     <section class="nav-section">
-        <nav>
-            <a href="index.html"><img src="img/upscale_logo-removebg-preview.png" alt="logo"></a>
-            <div class="navlinks" id="navlinks">
-                <ul>
-                    <li><a href="#contacts">Contact Us</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#home">Home</a></li>
-                </ul>
-            </div>
-        </nav>
-    </section>
+    <nav>
+        <a href="index.html"><img src="img/upscale_logo-removebg-preview.png" alt="logo"></a>
+        <div class="navlinks" id="navlinks">
+            <ul>
+                <li><a href="#contacts">Contact Us</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#home">Home</a></li>
+            </ul>
+        </div>
+        <button class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+</section>
 
     <section class="header" id="home">
         <div class="parallax-bg">
             <div class="text-box">
-                <h1>Welcome to Upscale Builder <br> Services Inc.</h1>
+                <h1>Welcome to Upscale<br> Builder Services Inc.</h1>
                 <p>Creating stunning designs for your business <br>
                 commercial and residential spaces.</p>
                 <a href="#projects" class="hiro-btn">View Our Work</a>
@@ -52,7 +59,7 @@
             design and construction services</h3>
         <div class="service-container">
             <div class="service-card slide-left">
-                <img src="img/floorplan.jpg" alt="">
+                <img src="img/architectural plan.png" alt="">
                 <div class="service-overlay">
                     <h3>Architectural Design</h3>
                     <p>Modern, functional, and aesthetic building design.</p>
@@ -65,7 +72,7 @@
                     <p>Elegant and space-efficient interior solutions.</p>
                 </div>
             </div>
-            <div class="service-card slide-left">
+            <div class="service-card slide-left" style="grid-column: 2 / 3;">
                 <img src="img/project management.jpg" alt="">
                 <div class="service-overlay">
                     <h3>Project Management</h3>
@@ -79,7 +86,7 @@
     <div class="portfolio-header slide-up">
         <p class="portfolio-label">Our Recent Projects</p>
         <h2>Featured Projects</h2>
-        <p class="portfolio-desc">A glimpse of what we have built and designed.</p>
+        <p class="portfolio-desc">A glimpse of what we have built and designed. :pp</p>
     </div>
 
     <div class="project-container">
@@ -123,29 +130,67 @@
 </section>
 
     <section class="testimonial">
-        <h2>What Our Clients Say</h2>
-        <div class="testimonial-container">
-            <div class="testimonial-item">
-                <p>"Upscale Design transformed our office space into a modern and functional environment. Highly recommend!"</p>
-                <h4>- John Doe, CEO of TechCorp</h4>
+        <div class="testimonial-header slide-up">
+            <p class="testimonial-label">Testimonials</p>
+            <h2>What Our Clients Say</h2>
+        </div>
+
+        <div class="swiper testimonial-swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide testimonial-item">
+                    <p class="testimonial-quote">Upscale Design transformed our office <br>
+                        space into a modern and functional <br>
+                        environment. Highly recommended!</p>
+                        <h4>John Doe</h4>
+                    <p class="testimonial-role">CEO, TechCorp</p>
+                </div>
+
+                <div class="swiper-slide testimonial-item">
+                    <p class="testimonial-quote">Upscale Design transformed our office <br>
+                        space into a modern and functional <br>
+                        environment. Highly recommended!</p>
+                        <h4>John Doe</h4>
+                    <p class="testimonial-role">CEO, TechCorp</p>
+                </div>
+
+                <div class="swiper-slide testimonial-item">
+                    <p class="testimonial-quote">Upscale Design transformed our office <br>
+                        space into a modern and functional <br>
+                        environment. Highly recommended!</p>
+                        <h4>John Doe</h4>
+                    <p class="testimonial-role">CEO, TechCorp</p>
+                </div>
+
             </div>
-            <div class="testimonial-item">
-                <p>"The team at Upscale Design was professional and creative. They delivered exactly what we envisioned for our home."</p>
-                <h4>- Jane Smith, Homeowner</h4>
-            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
         </div>
     </section>
 
     <section class="contact" id="contacts">
-        <h2>Contact Us</h2>
-        <form action="#" method="post">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" placeholder="Your Message" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
+    <div class="contact-container">
+        <div class="contact-left slide-up">
+            <p class="contact-label">Get In Touch</p>
+            <h2>Let's Build Something <br> Together</h2>
+            <p class="contact-desc">Have a project in mind? We'd love to hear from you. Send us a message and we'll get back to you as soon as possible.</p>
+            <div class="contact-details">
+                <p>📍 Quezon City, Philippines</p>
+                <p>📞 +63 912 345 6789</p>
+                <p>✉️ hello@upscaledesign.com</p>
+            </div>
+        </div>
+        <div class="contact-right slide-up">
+            <form action="https://formspree.io/f/xdaywwyq" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required autocomplete="name">
+                <input type="email" name="email" placeholder="Your Email" required autocomplete="email">
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </div>
     </section>
-
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
