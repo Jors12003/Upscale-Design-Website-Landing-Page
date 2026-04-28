@@ -58,70 +58,104 @@
         <h3 class="slide-up"> We offer a wide range of <br>
             design and construction services</h3>
         <div class="service-container">
-            <div class="service-card slide-left">
-                <img src="img/architectural plan.png" alt="">
-                <div class="service-overlay">
-                    <h3>Architectural Design</h3>
-                    <p>Modern, functional, and aesthetic building design.</p>
-                </div>
-            </div>
-            <div class="service-card slide-right">
-                <img src="img/moderncontemp.jpg" alt="">
-                <div class="service-overlay">
-                    <h3>Interior Design</h3>
-                    <p>Elegant and space-efficient interior solutions.</p>
-                </div>
-            </div>
-            <div class="service-card slide-left" style="grid-column: 2 / 3;">
-                <img src="img/project management.jpg" alt="">
-                <div class="service-overlay">
-                    <h3>Project Management</h3>
-                    <p>End-to-end supervision of construction projects.</p>
-                </div>
+    <div class="service-card slide-left">
+        <img src="img/architectural plan.png" alt="">
+        <div class="service-overlay">
+            <h3>Architectural Design</h3>
+            <p>Modern, functional, and aesthetic building design.</p>
+        </div>
+    </div>
+    <div class="service-card slide-right">
+        <img src="img/moderncontemp.jpg" alt="">
+        <div class="service-overlay">
+            <h3>Interior Design</h3>
+            <p>Elegant and space-efficient interior solutions.</p>
+        </div>
+    </div>
+    <div class="service-text slide-up">
+        <h3>Crafted with precision,<br>built with purpose.</h3>
+        <p>Every space we design reflects our commitment to quality and innovation — from concept to completion.</p>
+    </div>
+    <div class="service-card slide-left">
+        <img src="img/project management.jpg" alt="">
+        <div class="service-overlay">
+            <h3>Project Management</h3>
+            <p>End-to-end supervision of construction projects.</p>
+        </div>
+    </div>
+</div>
+    </section>
+
+    <section class="steps">
+        <div class="step" id="step1">
+            <div class="step-content">
+                <span class="step-number">01</span>
+                <h2>Initial Consultation</h2>
+                <p>share your vision with us. We sit down with you to understand your goals,
+                budget, and timeline - laying the foundation for everything that follows.</p>
             </div>
         </div>
+        <div class="step" id="step2">
+        <div class="step-content">
+            <span class="step-number">02</span>
+            <h2>Design & Planning</h2>
+            <p>Our team crafts a detailed architectural plan tailored to your needs — from concept sketches to full blueprints, ensuring every detail is accounted for.</p>
+        </div>
+    </div>
+    <div class="step" id="step3">
+        <div class="step-content">
+            <span class="step-number">03</span>
+            <h2>Build & Deliver</h2>
+            <p>We bring the design to life. Our project managers oversee every phase of construction, ensuring quality, precision, and on-time delivery.</p>
+        </div>
+    </div>
+
     </section>
 
     <section class="portfolio" id="projects">
     <div class="portfolio-header slide-up">
         <p class="portfolio-label">Our Recent Projects</p>
         <h2>Featured Projects</h2>
-        <p class="portfolio-desc">A glimpse of what we have built and designed. :pp</p>
+        <p class="portfolio-desc">A glimpse of what we have built and designed.</p>
     </div>
 
-    <div class="project-container">
-        <div class="project-card slide-up">
-            <div class="project-thumbnail">
-                <img src="https://placehold.co/800x500" alt="project 1">
+    <div class="swiper project-swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide project-slide">
+                <div class="project-video-container">
+                    <video src="https://www.w3schools.com/html/mov_bbb.mp4" 
+                           muted loop playsinline autoplay></video>
+                    <div class="project-slide-info">
+                        <h3>Modern Office Space</h3>
+                        <p>Quezon City, Philippines · 2024</p>
+                    </div>
+                </div>
             </div>
-            <div class="project-info">
-                <h3>Modern Office Space</h3>
-                <p>Transforming a traditional office into a sleek, modern workspace.</p>
-                <p>Quezon City, Philippines 2024</p>
-            </div>
-        </div>
 
-        <div class="project-card slide-up">
-            <div class="project-thumbnail">
-                <img src="https://placehold.co/800x500" alt="project 2">
+            <div class="swiper-slide project-slide">
+                <div class="project-video-container">
+                    <video src="https://www.w3schools.com/html/mov_bbb.mp4" 
+                           muted loop playsinline autoplay></video>
+                    <div class="project-slide-info">
+                        <h3>Luxury Residential Home</h3>
+                        <p>Tagaytay City, Philippines · 2023</p>
+                    </div>
+                </div>
             </div>
-            <div class="project-info">
-                <h3>Luxury Residential Home</h3>
-                <p>Designing a luxurious and functional home for a family of four.</p>
-                <p>Tagaytay City, Philippines 2023</p>
-            </div>
-        </div>
 
-        <div class="project-card slide-up">
-            <div class="project-thumbnail">
-                <img src="https://placehold.co/800x500" alt="project 3">
-            </div>
-            <div class="project-info">
-                <h3>Commercial Retail Space</h3>
-                <p>Creating an inviting retail environment for a local boutique.</p>
-                <p>Makati City, Philippines 2024</p>
+            <div class="swiper-slide project-slide">
+                <div class="project-video-container">
+                    <video src="https://www.w3schools.com/html/mov_bbb.mp4" muted loop playsinline autoplay></video>
+                    <div class="project-slide-info">
+                        <h3>Commercial Retail Space</h3>
+                        <p>Makati City, Philippines · 2024</p>
+                    </div>
+                </div>
             </div>
         </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
     </div>
 
     <div class="portfolio-footer slide-up">
@@ -129,44 +163,52 @@
     </div>
 </section>
 
-    <section class="testimonial">
-        <div class="testimonial-header slide-up">
-            <p class="testimonial-label">Testimonials</p>
-            <h2>What Our Clients Say</h2>
-        </div>
+   <section class="testimonial">
+    <div class="testimonial-header slide-up">
+        <p class="testimonial-label">Testimonials</p>
+        <h2>What Our Clients Say</h2>
+    </div>
 
-        <div class="swiper testimonial-swiper">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide testimonial-item">
-                    <p class="testimonial-quote">Upscale Design transformed our office <br>
-                        space into a modern and functional <br>
-                        environment. Highly recommended!</p>
-                        <h4>John Doe</h4>
+    <div class="swiper testimonial-swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide testimonial-item">
+                <div class="testimonial-speaker">
+                    <img src="https://placehold.co/150x150" alt="John Doe">
+                </div>
+                <div class="testimonial-body">
+                    <p class="testimonial-quote">"Upscale Design transformed our office space into a modern and functional environment. Highly recommended!"</p>
+                    <h4>John Doe</h4>
                     <p class="testimonial-role">CEO, TechCorp</p>
                 </div>
-
-                <div class="swiper-slide testimonial-item">
-                    <p class="testimonial-quote">Upscale Design transformed our office <br>
-                        space into a modern and functional <br>
-                        environment. Highly recommended!</p>
-                        <h4>John Doe</h4>
-                    <p class="testimonial-role">CEO, TechCorp</p>
-                </div>
-
-                <div class="swiper-slide testimonial-item">
-                    <p class="testimonial-quote">Upscale Design transformed our office <br>
-                        space into a modern and functional <br>
-                        environment. Highly recommended!</p>
-                        <h4>John Doe</h4>
-                    <p class="testimonial-role">CEO, TechCorp</p>
-                </div>
-
             </div>
-            <div class="swiper-pagination"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
+
+            <div class="swiper-slide testimonial-item">
+                <div class="testimonial-speaker">
+                    <img src="https://placehold.co/150x150" alt="Jane Smith">
+                </div>
+                <div class="testimonial-body">
+                    <p class="testimonial-quote">"The team at Upscale Design was professional and creative. They delivered exactly what we envisioned for our home."</p>
+                    <h4>Jane Smith</h4>
+                    <p class="testimonial-role">Homeowner</p>
+                </div>
+            </div>
+
+            <div class="swiper-slide testimonial-item">
+                <div class="testimonial-speaker">
+                    <img src="https://placehold.co/150x150" alt="Mark Reyes">
+                </div>
+                <div class="testimonial-body">
+                    <p class="testimonial-quote">"From concept to completion, the attention to detail was outstanding. Our commercial space exceeded all expectations."</p>
+                    <h4>Mark Reyes</h4>
+                    <p class="testimonial-role">Business Owner</p>
+                </div>
+            </div>
         </div>
-    </section>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+</section>
 
     <section class="contact" id="contacts">
     <div class="contact-container">
@@ -190,6 +232,42 @@
         </div>
     </div>
     </section>
+
+    <footer class="footer">
+    <div class="footer-container">
+        <div class="footer-brand">
+            <img src="img/upscale_logo-removebg-preview.png" alt="Upscale Design Logo">
+            <p class="footer-tagline">Designing the Future,<br>Building Your Vision.</p>
+            <div class="footer-socials">
+                <a href="#">FB</a>
+                <a href="#">IG</a>
+                <a href="#">LN</a>
+            </div>
+        </div>
+
+        <div class="footer-links">
+            <h4>Navigation</h4>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contacts">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-contact">
+            <h4>Contact</h4>
+            <p>📍 Quezon City, Philippines</p>
+            <p>📞 +63 912 345 6789</p>
+            <p>✉️ hello@upscaledesign.com</p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2024 Upscale Builder Services Inc. All rights reserved.</p>
+    </div>
+</footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
