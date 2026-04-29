@@ -217,9 +217,9 @@ a img {
 .slide-right {
     opacity: 0;
     transform: translateX(80px);
-    transition: opacity 1s cubic-bezier(0.25, 0.46, 0.45, 0.94); 
-    transform: 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    will-change: opacity, transform; 
+    transition: opacity 1s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: opacity, transform;
 }
 
 .slide-left.visible,
@@ -406,6 +406,7 @@ a img {
 /* steps */
 .steps {
     position: relative;
+    height: auto;
 }
 
 .step {
@@ -591,6 +592,7 @@ a img {
     background-color: #04091e;
     color: #fff;
     text-align: center;
+    overflow: visible;
 }
 
 .testimonial-header {
@@ -673,6 +675,29 @@ a img {
 .swiper-pagination-bullet-active {
     background: #e1247a;
     opacity: 1;
+}
+
+.testimonial-swiper {
+    position: relative;
+    width: 100%;
+    padding: 0 60px;
+    box-sizing: border-box;
+}
+
+.testimonial-swiper .swiper-button-prev {
+    left: 0;
+    top: 50%;
+    transform: translateY(50%);
+}
+
+.testimonial-swiper .swiper-button-next {
+    right: 0;
+    top: 50%;
+    transform: translateY(50%);
+}
+
+.testimonial-swiper .swiper-pagination {
+    bottom: -30px;
 }
 
 /* CONTACT SECTION */
@@ -788,9 +813,10 @@ a img {
 .footer-container {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
-    gap: 60px;
+    gap: 40px;
     padding-bottom: 60px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    align-items: start;
 }
 
 .footer-brand img {
@@ -894,6 +920,7 @@ a img {
         overflow-x: hidden;
     }
 
+    /* NAV */
     nav {
         padding: 0 20px;
     }
@@ -921,6 +948,7 @@ a img {
         display: flex;
     }
 
+    /* HERO */
     .text-box {
         width: 85%;
         left: 20px;
@@ -941,19 +969,25 @@ a img {
         font-size: 14px;
     }
 
+    /* CRAFT */
     .craft {
-        padding: 80px 30px;
-        min-height: auto;
+        min-height: 100vh;
+        padding: 60px 20px;
     }
 
     .craft-content h2 {
         font-size: 28px;
     }
 
+    .craft-label {
+        font-size: 14px;
+    }
+
     .craft-desc {
         font-size: 14px;
     }
 
+    /* SERVICES */
     .services {
         padding: 60px 20px;
     }
@@ -966,31 +1000,84 @@ a img {
         margin-top: 0;
     }
 
+    .service-card:nth-child(1) img,
+    .service-card:nth-child(2) img,
+    .service-card:nth-child(4) img {
+        height: 300px;
+    }
+
     .service-text {
         padding: 20px 0;
     }
 
+    /* STEPS */
+    .steps {
+        height: 300vh;
+    }
+
+    .step {
+        position: sticky;
+        height: 100vh;
+    }
+
+    .step-content h2 {
+        font-size: 28px;
+    }
+
+    .step-number {
+        font-size: 80px;
+    }
+
+    .step-content p {
+        font-size: 14px;
+    }
+
+    /* PORTFOLIO */
     .portfolio {
         padding: 60px 20px;
     }
 
-    .project-container {
-        grid-template-columns: 1fr;
+    .project-video-container {
+        height: 50vh;
     }
 
+    /* TESTIMONIAL */
     .testimonial {
         padding: 60px 20px;
     }
 
     .testimonial-item {
+        flex-direction: column;
+        align-items: center;
         padding: 30px 20px;
+        text-align: center;
+        gap: 20px;
     }
 
+    .testimonial-body {
+        text-align: center;
+    }
+
+    .testimonial-quote {
+        font-size: 15px;
+    }
+
+    /* CONTACT */
     .contact {
         padding: 60px 20px;
     }
 
     .contact-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    /* FOOTER */
+    .footer {
+        padding: 60px 20px 0 20px;
+    }
+
+    .footer-container {
         grid-template-columns: 1fr;
         gap: 40px;
     }
