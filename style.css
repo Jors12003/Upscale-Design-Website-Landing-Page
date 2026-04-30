@@ -475,6 +475,13 @@ a img {
     margin: 0 auto;
 }
 
+.step-line {
+    width: 700px;
+    height: 2px;
+    background-color: #e1247a;
+    margin: 0 auto 25px auto;
+}
+
 /* PORTFOLIO SECTION */
 .portfolio {
     padding: 80px 150px;
