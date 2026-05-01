@@ -1,0 +1,13 @@
+[33m1b143be[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m fully ai projects.html project.css/ about.css about.html with responsiveness overall need nalang palitan ng mga legitimate sources, live video montage, overall solid 80%
+[33mc6a662b[m line for steps
+[33m0866bb7[m added marquee, and box elements and centered the text box
+[33mbc0e789[m disable indexing
+[33mdeb34c3[m[33m ([m[1;31morigin/main[m[33m)[m fix the footer horizontal scroll and footer responsiveness fix the step sticky stacking effect
+[33mf3c8a56[m added steps and polish some UI/UX like scroll parallax behavior of service, project video optimization, testimonials, and added footer kulang pa ng responsiveness and optimization sa iba
+[33mc2e3b23[m before I further fucked up, lets make this a checkpoint so that I can revert anytime
+[33m0876156[m bago burahin ni pia
+[33me38b8e8[m changed the background color of services to background image sticky
+[33me76a7d9[m added craft section heavy text before services
+[33m32778ad[m finished services
+[33mf2136db[m add parallax effect using javascript and gpt on the header hero section
+[33m7863168[m initial commit
